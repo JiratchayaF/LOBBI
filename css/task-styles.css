@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url("img/bg.jpg");
+    background-repeat: repeat;
+}
+
+.sidebar {
+    color: #0A1931;
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.sidebar .menu{
+   width: 100%;
+   margin-top: 0px;
+}
+
+.sidebar .menu .title{
+    font-size: large;
+    font-weight: 500;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    color: #71A5C6;
+ }
+ 
+
+.sidebar .menu .sub-menu {
+    position: relative;
+ }
+
+.sidebar .menu .item a{
+    color: #0A1931;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    padding: 0px 50px;
+    line-height: 60px;
+ }
+
+ .sidebar .menu .item a .dropdown{
+    position: absolute; 
+    right: 0;
+    margin: 20px;
+}
+
+.sidebar .menu .item .sub-menu a{
+    padding-left: 80px;
+}
+
+.sidebar .menu .item .sub-menu .status{
+    margin-right: 15px;
+    color: #43EE7D;
+}
+
+.sidebar .menu .item .sub-menu .status-offline{
+    margin-right: 15px;
+    color: #FF594D;
+}
+
+.name {
+    font-size: 30px;
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.quote {
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.sidebar .profile {
+    position: fixed;
+    bottom: 0;
+}
+
+.sidebar .profile .profile-name{
+    position: absolute;
+    margin: 25px 10px 10px 5px;
+    font-weight: bold;
+}
+
+.sidebar .profile .profile-role{
+    font-size: 12px;
+    position: absolute;
+    color: #9F9F9F;
+    margin: 45px 10px 50px 5px;
+}
+
+.sidebar .profile img {
+    height: 60px;
+    width: 60px;
+    margin: 10px;
+}
+
+.task {
+    color: #9F9F9F;
+    position: fixed;
+    margin: 35px 30px 10px 156px;
+}
+
+.timer {
+    color: #9F9F9F;
+    position: fixed;
+    margin: 35px 30px 10px 186px;
+}
+
+.content {
+    margin: 10px;
+
+}
+
+.content .title-name {
+    position: fixed;
+    color: #0A1931;
+    padding: 20px;
+    font-size: 45px;
+    left: 350px;
+    top: 17.5px;
+}
+
+.content .title-name span {
+    margin-right: 15px;
+    font-weight: 500;
+}
+
+.content .back {
+    color: #0A1931;
+    font-size: 35px;
+    margin-right: 100px;
+}
+.content .back:hover {
+    color: #909497;
+  font-size: 35px;
+  margin-right: 100px;
+}
+
+.content .title-name hr {
+    color: #9F9F9F solid 0.5px;
+    width: 1000px;
+    text-align: center;
+    margin: 20px;
+}
+
+.usual .usual-title {
+    position: fixed;
+    color: #4DB6AC;
+    margin: 10px;
+    top: 130px;
+    left: 420px;
+}
+
+.usual .usual-task {
+    border-radius: 10px;
+}
+
+.usual-task {
+    position: fixed;
+    background-color:white;
+    box-shadow: 2px 2px 4px #9F9F9F;
+    padding: 20px;
+    height: auto;
+    width: 400px;
+    top: 180px;
+    left: 430px;
+}
+
+.usual-task .task-title {
+    font-size: 18px;
+    font-weight: bolder;
+    margin-right: 10px;
+}
+
+.usual-task .task-title span{
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.task-details {
+    padding: 15px;
+    background-color: #dfdfdf;
+    font-size: 14;
+    color: #0A1931;
+    margin: 10px;
+    border-radius: 10px;
+    height: auto;
+}
+
+.exp {
+    position: fixed;
+    left: 54%;
+    font-size: 13px;
+}
+
+.progress-bar {
+    width: 68%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #dfdfdf;
+    color: transparent;
+    position: fixed;
+    top: 90%;
+    left: 28%;
+}
+
+.progress-bar #myBar {
+    position: relative;
+    width: 50%;
+    height: 40px;
+    background-color: #04AA6D;
+    top: -50%;
+    border-radius: 10px;
+}

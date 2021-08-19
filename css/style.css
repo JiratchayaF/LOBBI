@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+* {
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+:root {
+  --white-light: whitesmoke;
+  --light-green: #45B39D;
+  --gray-light: #E5E3E8;
+  --gray-dark: #A5A2A9;
+  --light: #fcf8fb;
+  --transition: all 150ms cubic-bezier(.46, 1.13, .67, .87);
+}
+/* body{
+} */
+.title-name {
+  position: fixed;
+  color: #0A1931;
+  padding: 20px;
+  font-size: 45px;
+  left: 350px;
+  top: 17.5px;
+}   
+.title-name hr {
+  color: #9F9F9F solid 0.5px;
+  width: 1000px;
+  text-align: center;
+  margin: 20px;
+}
+.back {
+  color: #0A1931;
+  font-size: 35px;
+  margin-right: 100px;
+}
+.back:hover {
+  color: #909497;
+  font-size: 35px;
+  margin-right: 100px;
+}
+h3{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: var(--light-green);
+}
+.MyStatustopic{
+  position: fixed;
+  top: 120px;
+  left: 860px;
+}
+.MyStatus {
+    background-color: whitesmoke;
+    box-shadow: 0 15px 40px -10px #A6ACAF;
+    border-radius: 5px;
+    width: 33.33%;
+    padding: 20px 25px 25px 25px;
+    position: fixed;
+    top:145px;
+    left:840px;
+    margin: 15px;
+}
+.account{
+    font-size: 17px;
+    padding-top: 20px;
+    margin: 5px;
+}
+.row{
+  margin-left: 15px;
+}
+.topic {
+    padding-bottom: 0px;
+    font-size: 14px;
+}
+#logo-img{
+    background: url('/Users/prairayas/Desktop/buildon TH/Coding/image/profile.png') no-repeat;
+    width: 80px;
+    height: 80px;
+    margin: 0px 10px 0px 0px; 
+    position: static;
+    float: left;
+    padding: 5px 0px 0px 0px;
+    border-radius: 0px;
+}
+p {
+    width: 50%;
+    padding: 5px;
+}
+#p1{
+    position:static;
+    float: left;
+    clear: both;
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+#p2{
+    margin-left: 10px;
+    position:relative;
+    clear: right;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* CLock io */
+.Clockio {
+    width: 33.33%;
+    padding: 0px 10px 10px 10px;
+    position: fixed;
+    top: 125px;
+    left: 350px;
+}
+
+  
+.clock-container {
+    width: 280px;
+    height: 90px;
+    display: flex;
+    background-color: whitesmoke;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 40px;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 15px 40px -10px #A6ACAF;
+  }
+  
+  .clock-container span {
+    text-transform: uppercase;
+    font-size: 10px;
+    text-align: right;
+    display: block;
+  }
+  
+  .clock-container p {
+    font-size: 28px;
+    color: gray;
+    font-weight: 100;
+  }
+  
+  
+  .clock-container p:first-letter {
+    letter-spacing: 5px;
+  }
+  
+  .colonin {
+    --size: 3px;
+    width: var(--size);
+    color: var(--light-green);
+    height: 15px;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .colonout {
+    --size: 3px;
+    width: var(--size);
+    color: #C0392B;
+    height: 15px;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .colonin::before  {
+    content: '';
+    width: 100%;
+    height: var(--size);
+    background-color: var(--light-green);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+  }
+  
+  .colonin::after {
+    content: '';
+    width: 100%;
+    height: var(--size);
+    background-color: var(--light-green);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+  }
+.CheckIn{
+    position: relative;
+    margin: 0px 0px 5px 0;
+    padding-top: 0px;
+    margin-right: 0;
+}
+.CheckOut{
+    position: relative;
+    clear: right;
+    margin-top: 5%;
+    margin-bottom: 20px;
+}
+button {
+   align-items: center;
+}
+#clockbuttonin {
+    margin-top: 35%;
+    font-size: 18px;
+    border:none;
+    padding: 5px 14px;
+    cursor: pointer;
+    position: relative;
+    left: 39.8%;
+    background-color: rgba(69, 179, 157,0.9);
+    border-radius: 5px;
+    color: white;
+}
+#clockbuttonin:hover{
+    margin-top: 35%;
+    font-size: 18px;
+    border:none;
+    padding: 5px 14px;
+    cursor: pointer;
+    position: relative;
+    left: 39.8%;
+    background-color: var(--gray-light);
+    border-radius: 5px;
+    color: var(--light-green);
+}
+#clockbuttonout{
+    font-size: 18px;
+    border:none;
+    padding: 5px 14px;
+    left: 38.5%;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(192, 57, 43,0.9);
+    border-radius: 5px;
+    color: white;
+}
+#clockbuttonout:hover{
+    font-size: 18px;
+    border:none;
+    padding: 5px 14px;
+    left: 38.5%;
+    cursor: pointer;
+    position: relative;
+    background-color: var(--gray-light);
+    border-radius: 5px;
+    color: #C0392B;
+}
+.TimerCount{
+  position: relative;
+  text-align: center;
+  margin-bottom: 10px;
+  animation-name: --open;
+  animation-duration: 0.6s;
+  animation-fill-mode:forwards;
+}
+#timespend{
+  font-size: 20px;
+  color: whitesmoke;
+  width:40%;
+  background-color: gray;
+  position: relative;
+  left:30%;
+  text-align: center;
+  padding: 3px 15px;
+  border-radius: 5px;
+  box-shadow: 0 15px 30px -5px #A6ACAF;
+}
+.WeeklyReport{
+  width: 66%;
+  position: fixed;
+  top: 480px;
+  left: 400px;
+  padding: 0px 10px 10px 10px;
+}
+.static{
+  background-color: whitesmoke;
+  box-shadow: 0 15px 30px -5px #A6ACAF;
+  border-radius: 5px;
+  padding: 20px 20px;
+  position: relative;
+}
+.topicWeek{
+  margin-left: 15px;
+}
+/* #graph{
+
+} */
+@keyframes --open {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}

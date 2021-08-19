@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script> 
+</html>
+
+<body>
+    <div class="sidebar">
+        <div class="name">Worktory</div>
+        <div class="quote">“Make it happen <br> and Shock everyone"</div>
+
+        <div class="menu">
+                <div class="title">Department</div>
+
+                <div class="item"><a href="#">HR<i class="fas fa-angle-down dropdown"></i></a></div>
+
+                <div class="item">
+                    <div class="item"><a href="#">Financial<i class="fas fa-angle-down dropdown"></i></a></div>
+                    <div class="item">
+                  <a class="sub-btn"></i>Developers<i class="fas fa-angle-down dropdown"></i></a>
+                  <div class="sub-menu">
+                    <a href="#" class="sub-item"><i class="fa-fw fa-xs fas fa-circle status"></i>Sonja</a>
+                    <a href="#" class="sub-item"><i class="fa-fw fa-xs fas fa-circle status-offline"></i>Peter</a>
+                  </div> <!--sub menu-->
+                </div> <!-- developers-->
+
+                <div class="title">General zone</div>
+
+                <div class="item">
+                    <a class="sub-btn"></i>Announcement<i class="fas fa-angle-down dropdown"></i></a>
+                    <div class="sub-menu">
+                      <a href="#" class="sub-item"><i class="fa-fw fa-xs fas fa-circle status"></i>Sarah</a>
+                    </div> <!--Announcement-->
+
+                <div class="item"><a href="#">Lounge<i class="fas fa-angle-down dropdown"></i></a></div>
+                </div>
+                </div> <!--main item-->
+        </div> <!--side nav menu-->
+
+        <div class="profile">
+            <div class="profile-content">
+                <img src="image/profile.png" alt="profile">
+                <span class="profile-name">Sarah</span>
+                <span class="profile-role">#SoftwareEngineer</span>
+                <a href="Clockin_out.html"><i class="far fa-clock timer"></i></a>
+                <a href="task.html"><i class="far fa-check-circle task"></i></a>            
+            </div>
+        </div>
+    </div> <!--sidebar end-->
+    <div class="title-name">
+        <a href="index.html"><i class="fas fa-arrow-left back"></i></a><span>Time Tracker</span>
+        <hr>
+    </div> <!-- title-name  -->
+    <div class="MyStatustopic"><h3>My Status</h3></div> <!-- MyStatustopic -->
+    <div class="MyStatus">
+        <div class="topic">
+            <div id="logo-img"></div>
+            <div class="account">Sarah</div>
+            <div style="color: #808B96; padding-bottom: 15px;">Email: username@outlook.com</div><hr style="margin-top: 5px;">
+        </div>
+        <div class="row">
+            <div  id="p1">Software Engineer<div style="font-size: 14px; color: gray;">Position</div></div>
+            <div  id="p2">8h 0m 0s<div style="font-size: 14px; color: gray;">Maximum logged time</div></div>
+            <div  id="p1">Developers<div style="font-size: 14px; color: gray;">Channel</div></div>
+            <div  id="p2">7h 48m<div style="font-size: 14px; color: gray;">Logged time average</div></div>
+            <div  id="p1">Good<div style="font-size: 14px; color: gray;">Work performance</div></div>
+            <div  id="p2">Task defender<div style="font-size: 14px; color: gray;">Task completed</div></div>
+        </div>
+    </div><!-- MyStatus  -->
+
+    <div class="Clockio">
+        <div class="CheckIn">
+            <div class="clock-container">
+                <div class="hours">
+                  <span>Hours</span>
+                  <p id='hourin'> 00 </p>
+                </div>
+                <div class="colon">:</div>
+                <div class="minutes">
+                  <span>Minutes</span>
+                  <p id='minutein'> 00 </p>
+                </div>
+                <div class="colon">:</div>
+                <div class="seconds">
+                  <span>Seconds</span>
+                  <p id='secondin'> 00 </p>
+                </div>
+            </div>
+            <button id="clockbuttonin"type="button" onclick="timein();timercount()">Clock in<div id="showin"></div></button>
+            
+        </div> <!-- CheckIn  -->
+        <div class="CheckOut">
+            <button id="clockbuttonout" type="button"onclick="timeout()">Clock out<div id="showout"></div></button>
+            <script>
+                document.querySelector('#clockbuttonout').addEventListener('click', () => {
+                  Confirm.open({
+                    title: 'Worktory Timer Check',
+                    message: 'Done!  Clock out time: ' + out,
+                  })
+                });
+              </script>
+        </div> <!-- CheckOut  -->
+        <div class="TimerCount">
+            <div style="font-size: 15px; color: gray;">Until Check out
+                <div id="timespend">0h 0m 0s</div>
+            </div>
+        </div> <!-- TimerCount  -->
+    </div> <!-- Clockio  -->
+    <div class="WeeklyReport">
+        <h3 class="topicWeek">Weekly report</h3>
+        <div class="static">
+            <div id="graph">
+                <canvas id="myChart" style="width:50%;max-width:450px"></canvas>
+            </div>
+        </div>
+    </div> <!-- WeeklyReport  -->
+    
+    <script src="javascript/ModalWin.js"></script>
+    <script src="javascript/main.js"></script>
+    <script src="javascript/countdown.js"></script>
+    <script src="javascript/graph.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        //jquery for toggle sub menus
+        $('.sub-btn').click(function(){
+            $(this).next('.sub-menu').slideToggle();
+        });
+    }); 
+
+    function userJoin() {
+        var popup = document.getElementById("user");
+        popup.classList.toggle("show");
+    }
+
+    function userMenu() {
+        var popup = document.getElementById("menu");
+        popup.classList.toggle("show");
+    }
+
+    </script>    
+</body>

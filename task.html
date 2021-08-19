@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"></metacharset>
+        <link rel="stylesheet" href="css/task-styles.css"></link>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>    
+    </head>
+
+    <body>   
+        <div class="sidebar">
+            <div class="name">Worktory</div>
+            <div class="quote">“Make it happen <br> and Shock everyone"</div>
+
+            <div class="menu">
+                    <div class="title">Department</div>
+
+                    <div class="item"><a href="#">HR<i class="fas fa-angle-down dropdown"></i></a></div>
+
+                    <div class="item">
+                        <div class="item"><a href="#">Financial<i class="fas fa-angle-down dropdown"></i></a></div>
+                        <div class="item">
+                      <a class="sub-btn"></i>Developers<i class="fas fa-angle-down dropdown"></i></a>
+                      <div class="sub-menu">
+                        <a href="#" class="sub-item"><i class="fa-fw fa-xs fas fa-circle status"></i>Sonja</a>
+                        <a href="#" class="sub-item"><i class="fa-fw fa-xs fas fa-circle status-offline"></i>Peter</a>
+                      </div> <!--sub menu-->
+                    </div> <!-- developers-->
+
+                    <div class="title">General zone</div>
+
+                    <div class="item">
+                        <a class="sub-btn"></i>Announcement<i class="fas fa-angle-down dropdown"></i></a>
+                        <div class="sub-menu">
+                          <a href="#" class="sub-item"><i class="fa-fw fa-xs fas fa-circle status"></i>Sarah</a>
+                        </div> <!--Announcement-->
+
+                    <div class="item"><a href="#">Lounge<i class="fas fa-angle-down dropdown"></i></a></div>
+                    </div>
+                    </div> <!--main item-->
+            </div> <!--side nav menu-->
+ 
+            <div class="profile">
+                <div class="profile-content">
+                    <img src="image/profile.png" alt="profile">
+                    <span class="profile-name">Sarah</span>
+                    <span class="profile-role">#SoftwareEngineer</span>
+                    <a href="Clockin_out.html"><i class="far fa-clock timer"></i></a>
+                    <a href="task.html"><i class="far fa-check-circle task"></i></a>            
+                </div>
+            </div>
+        </div> <!--sidebar end-->
+
+        <div class="content">
+            <div class="title-name">
+                <a href="index.html"><i class="fas fa-arrow-left back"></i></a><span>Task</span><span>Tracker</span>
+                <hr>
+            </div>
+
+            <div class="usual">
+                <h2 class="usual-title">Usual</h2>
+                <div class="usual-task">
+                    <p class="task-title">Daily tasks <span id="datetime"></span></p>
+                    <div class="task-details">
+                        <input type="checkbox" value="50" onclick="check()">
+                        Update weekly task <span class="exp">+50exp</span>                                
+                    </div>
+
+                    <div class="task-details">
+                        <input type="checkbox" value="50" onclick="check()">
+                        Prototype presentation <span class="exp">+50exp</span>                                 
+                    </div>
+
+                </div> <!-- usual-task -->
+            </div> <!-- usual -->
+
+            <div class="progress-bar" id="myProgress"> hi
+                <div id="myBar"></div>
+                <!-- <progress id="file" value="32" max="100"> 32% </progress> -->
+            </div>
+
+        </div> <!--content-->
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+            //jquery for toggle sub menus
+            $('.sub-btn').click(function(){
+                $(this).next('.sub-menu').slideToggle();
+            });
+        }); 
+
+        var dt = new Date();
+        document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+
+        // var coll = document.getElementsByClassName("collapsible");
+
+        // var i;
+
+        // for (i = 0; i < coll.length; i++) {
+        //     coll[i].addEventListener("click", function() {
+        //         this.classList.toggle("active");
+        //         var content = this.nextElementSibling;
+        //         if (content.style.display === "block") {
+        //             content.style.display = "none";
+        //         } else {
+        //         content.style.display = "block";
+        //         }
+        //     });
+        // }
+
+        var i = 0;
+        function check() {
+            if (i == 0) {
+                // i = 1;
+                var elem = document.getElementById("myBar");
+                var width = 2;
+                var id = setInterval(frame, 10);
+                function frame() {
+                    if (width >= 100) {
+                        clearInterval(id);
+                        i = 0;
+                    }
+                    else {
+                        width++ ;
+                        elem.style.width = width + "%";
+                        }        
+                    }
+
+                    if (style.width = 100 + "%") {
+                        alert("level up")
+
+                }
+            }
+            }
+            
+
+        </script>    
+    </body>
+</html>
